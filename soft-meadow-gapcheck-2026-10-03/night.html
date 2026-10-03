@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Settle Soft Meadow — Night</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{--primary:#007953;--bg:#F3F8F4;--cg1:#D9D9D6;--cg4:#BBBCBC;--cg7:#97999B;--cg9:#75787B;--cg11:#53565A;--white:#FFF}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#E8ECE9;font-family:"Open Sans",system-ui,sans-serif;color:var(--cg11);-webkit-font-smoothing:antialiased}
+.stage{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;padding:24px}
+.phone{width:390px;height:844px;background:var(--bg);border-radius:36px;overflow:hidden;position:relative;box-shadow:0 18px 48px rgba(83,86,90,.22);border:1px solid var(--cg4);display:flex;flex-direction:column}
+.status{height:36px;padding:8px 18px 0;display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:600;color:#fff;background:var(--primary);flex-shrink:0}
+.header{background:var(--primary);color:#fff;padding:2px 18px 10px;flex-shrink:0}
+.brand{font-size:10px;font-weight:600;opacity:.9;margin-bottom:4px}
+.header h1{font-size:24px;font-weight:700;line-height:1.1;margin-bottom:1px}
+.header .sub{font-size:14px;font-weight:600;opacity:.95;margin-bottom:2px}
+.header .note{font-size:11px;opacity:.88}
+.scroll{flex:1;overflow:hidden;padding:8px 10px 0;padding-bottom:70px}
+.card{background:#fff;border:1px solid var(--cg1);border-radius:12px;padding:8px 10px;margin-bottom:6px}
+.card h2{font-size:13px;font-weight:700;margin-bottom:4px}
+.label{font-size:10px;font-weight:600;color:var(--cg9);margin-bottom:2px}
+.field{background:var(--bg);border:1.5px solid var(--cg1);border-radius:9px;min-height:34px;padding:6px 10px;font-size:14px;font-weight:600;display:flex;align-items:center;margin-bottom:4px}
+.field:last-child{margin-bottom:0}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{min-height:32px;padding:5px 11px;border-radius:999px;border:1.5px solid var(--cg4);background:var(--bg);font-size:12px;font-weight:600;display:inline-flex;align-items:center}
+.chip.on{border-color:var(--primary);background:#E6F4EE;color:var(--primary)}
+.chip-caption{font-size:10px;color:var(--cg9);margin-top:4px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.tip{display:flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--cg1);border-radius:10px;padding:6px;margin-bottom:6px}
+.tip img{width:40px;height:40px;object-fit:cover;border-radius:8px;flex-shrink:0}
+.tip p{font-size:10px;line-height:1.3;color:var(--cg9)}
+.tip strong{display:block;color:var(--cg11);font-size:11px}
+.sheet{background:#fff;border:2px solid var(--primary);border-radius:14px;padding:10px;margin-bottom:4px;box-shadow:0 6px 16px rgba(0,121,83,.12)}
+.sheet h2{font-size:14px;font-weight:700;margin-bottom:2px}
+.sheet .lead{font-size:11px;line-height:1.3;margin-bottom:2px}
+.sound-badge{display:flex;align-items:center;gap:7px;background:#E6F4EE;color:var(--primary);border-radius:8px;padding:8px 10px;font-size:13px;font-weight:700;margin:6px 0;min-height:40px}
+.sound-badge .dot{width:9px;height:9px;border-radius:50%;background:var(--primary);flex-shrink:0}
+.harm{font-size:11px;line-height:1.35;color:var(--cg11);background:#FFF8F0;border:1px solid #F0E0C8;border-radius:8px;padding:8px 10px;margin-bottom:8px}
+.sheet-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.btn{min-height:48px;border-radius:11px;font-family:inherit;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;border:none}
+.btn-ghost{background:#fff;border:2px solid var(--cg4);color:var(--cg11)}
+.btn-primary{background:var(--primary);color:#fff}
+.nav{position:absolute;left:0;right:0;bottom:0;height:64px;background:var(--cg1);border-top:1px solid var(--cg4);display:grid;grid-template-columns:1fr 1fr 1fr;padding:4px 6px 10px;z-index:2}
+.nav a{text-decoration:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font-size:11px;font-weight:600;color:var(--cg9);border-radius:10px}
+.nav a.active{color:var(--primary);background:rgba(0,121,83,.10)}
+.nav .ico{font-size:15px;line-height:1}
+</style>
+<style id="capture">
+html,body{background:#F3F8F4!important;margin:0!important;padding:0!important}
+.stage{padding:0!important;min-height:auto!important;display:block!important}
+.phone{border-radius:0!important;box-shadow:none!important;border:none!important;width:390px!important;height:844px!important}
+</style>
+</head>
+<body>
+<div class="stage"><div class="phone" id="frame">
+<div class="status"><span>9:41</span><span>●●●  ▮▮▮  🔋</span></div>
+<div class="header">
+  <div class="brand">App Ltd · Settle</div>
+  <h1>Tonight</h1>
+  <div class="sub">Night notes</div>
+  <div class="note">Nightly notes are not scored.</div>
+</div>
+<div class="scroll">
+  <div class="card">
+    <h2>Night log</h2>
+    <div class="label">Bedtime</div><div class="field">22:15</div>
+    <div class="label">First settle</div><div class="field">22:40</div>
+    <div class="label">Wake times</div><div class="field">01:10 · 03:45 · 05:50</div>
+  </div>
+  <div class="card">
+    <h2>What you saw</h2>
+    <div class="chips">
+      <span class="chip on">pace</span><span class="chip">bark</span><span class="chip on">pant</span>
+      <span class="chip">accident</span><span class="chip">stare</span><span class="chip on">stuck</span>
+      <span class="chip on">whine</span><span class="chip">shake</span><span class="chip">cough</span>
+      <span class="chip">drink</span><span class="chip on">stiff</span><span class="chip on">wet bed</span>
+    </div>
+    <p class="chip-caption">Unscored observations — not a clinical score.</p>
+  </div>
+  <div class="card"><div class="row2">
+    <div><div class="label">Duration · your estimate</div><div class="field">~7h 20m</div></div>
+    <div><div class="label">Potty help</div><div class="field">Yes · 2×</div></div>
+  </div></div>
+  <div class="sheet" role="region" aria-label="Add video clip">
+    <h2>Add video clip</h2>
+    <p class="lead">First video — sound is part of the Hand-in pack.</p>
+    <div class="sound-badge"><span class="dot"></span> Video includes sound — required</div>
+    <div class="harm">If this clip shows clear harm, contact the police or RSPCA.</div>
+    <div class="sheet-actions">
+      <div class="btn btn-ghost">Cancel</div>
+      <div class="btn btn-primary">Upload video</div>
+    </div>
+  </div>
+</div>
+<nav class="nav" aria-label="Primary">
+  <a href="#"><span class="ico">⌂</span>Home</a>
+  <a class="active" href="#"><span class="ico">☾</span>Night</a>
+  <a href="hand-in.html"><span class="ico">✉</span>Hand-in</a>
+</nav>
+</div></div>
+</body>
+</html>
